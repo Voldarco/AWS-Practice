@@ -33,3 +33,11 @@
 
 ![Screenshot (82)](https://user-images.githubusercontent.com/69207791/208241749-2253e0d7-5bfa-4f87-9f48-aa1dce7d8336.png)
 
+# Delete your DynamoDB table.
+## You can easily delete a table from the DynamoDB console.<br> It is a best practice to delete tables you are no longer using so that you don’t keep getting charged for them.
+
+### In the DynamoDB console, select the checkbox of the tables you want to delete and then choose Delete.<br> Note no reversal once deleted
+### In the confirmation dialog box, enter the text delete and click Delete button.
+![Screenshot (83)](https://user-images.githubusercontent.com/69207791/208241751-747df7ff-b563-4b43-80b9-bdca44e73226.png)
+
+# The end.
