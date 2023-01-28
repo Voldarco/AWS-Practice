@@ -20,10 +20,11 @@ jobs:
       - checkout
       - run: echo World
 
-  print-my--env-var:
+  print-my-env-var:
     steps:
       - checkout
       - run: echo $ENV_VAR 
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
