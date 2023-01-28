@@ -21,6 +21,8 @@ jobs:
       - run: echo World
 
   print-my-env-var:
+    docker: 
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - run: echo $ENV_VAR 
