@@ -5,7 +5,6 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-
   print-hello:
     docker: 
       - image: circleci/node:13.8.0
@@ -19,7 +18,11 @@ jobs:
     steps:
       - checkout
       - run: echo World
-
+  environment:
+    My_Env: <<ENV_VAR>>
+  print-my--env-var:
+    steps:
+      - run: echo $My_Env 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
