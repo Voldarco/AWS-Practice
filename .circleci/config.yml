@@ -7,13 +7,15 @@ version: 2.1
 jobs:
 
   print-hello:
-    docker: [circleci/node:13.8.0]
+    docker: 
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - run: echo Hello
 
   print-world:
-    docker: [circleci/node:13.8.0]
+    docker: 
+      - image: circleci/node:13.8.0
     steps:
       - checkout
       - run: echo World
