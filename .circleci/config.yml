@@ -12,10 +12,12 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello World" > ~/output.txt
+
       - persit_to_workspace:
           root: ~/
           paths:
             - output.txt
+
   print_output_file:
     docker:
       - image: circleci/node:13.8.0
@@ -58,7 +60,7 @@ workflows:
           requires: 
             - print-hello
 
-      - save_hello_world_output
-      - print_output_file:
-          requires:
-            - save_hello_world_output
+   #   - save_hello_world_output
+  #    - print_output_file:
+ #         requires:
+#            - save_hello_world_output
