@@ -13,9 +13,9 @@ jobs:
       - checkout
       - run: echo "Hello World" > ~/output.txt
       - persit_to_workspace:
-           root: ~/
-           paths:
-             - output.txt
+          root: ~/
+          paths:
+            - output.txt
   print_output_file:
     docker:
       - image: circleci/node:13.8.0
