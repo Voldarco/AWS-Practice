@@ -6,6 +6,25 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
 
+  save_hello_world_output:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - run: echo "Hello World" > ~/output.txt
+      - persit_to_workspace:
+           root: ~/
+           paths:
+             - output.txt
+  print_output_file:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - checkout
+      - attach_workspace:
+           at: ~/
+      - run: cat ~/output.txt
+
   print-hello:
     docker: 
       - image: circleci/node:13.8.0
