@@ -54,13 +54,13 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
+       - save_hello_world_output
+       - print_output_file:
+           requires:
+             - save_hello_world_output
 
       - print-hello 
       - print-world:
           requires: 
             - print-hello
 
-   #   - save_hello_world_output
-  #    - print_output_file:
- #         requires:
-#            - save_hello_world_output
