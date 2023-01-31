@@ -3,7 +3,7 @@
 version: 2.1
 
 commands:
-  print_pipeline_id: &pipe
+  print_pipeline_id: &print_pipeline_id
     docker:
       - image: circleci/node:13.8.0
     environment:
@@ -15,7 +15,7 @@ commands:
 jobs:
 
   print_ci_id:
-    *pipe
+    <<: *print_pipeline_id
 
   save_hello_world_output:
     docker:
