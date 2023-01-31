@@ -60,9 +60,9 @@ workflows:
           requires:
             - save_hello_world_output
 
-      - print-hello 
-      - print-world:
-          requires: 
-            - print-hello
+#      - print-hello 
+#     - print-world:
+#          requires: 
+#            - print-hello
 
-      - print-my-env-var
+#      - print-my-env-var
