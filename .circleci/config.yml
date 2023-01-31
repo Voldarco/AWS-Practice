@@ -65,3 +65,4 @@ workflows:
           requires: 
             - print-hello
 
+      - print-my-env-var
